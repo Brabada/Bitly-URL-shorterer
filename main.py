@@ -4,7 +4,6 @@ from urllib.parse import urlparse
 
 import requests
 from dotenv import load_dotenv
-load_dotenv()
 
 
 def is_bitlink(token, url):
@@ -50,6 +49,7 @@ def count_clicks(token, link):
 
 
 def main():
+    load_dotenv()
     token = os.getenv('BITLINK_ACCESS_TOKEN')
 
     parser = argparse.ArgumentParser(
